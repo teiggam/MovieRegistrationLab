@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Movies>
+
+@foreach (Movies m in Model)
+{
+    <p>
+        Title: @m.Title<br>
+        Genre: @m.Genre<br>
+        Year: @m.Year<br>
+        Runtime: @m.Runtime<br>
+    </p>
+
+    <br />
+}

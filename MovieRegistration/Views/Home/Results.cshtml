@@ -1,0 +1,12 @@
+﻿@model Movies
+
+<p>@Model.Title has been registered.</p>
+
+@{
+
+    MovieDbContext db = new MovieDbContext();
+    Movies newMov = new Movies() { Title = Model.Title, Genre = Model.Genre, Year = Model.Year, Runtime = Model.Runtime };
+    db.Movies.Add(newMov);
+    db.SaveChanges();
+}
+
